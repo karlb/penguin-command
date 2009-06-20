@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* Penguin-Command */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = CBD6D8370955B0F000B3349B /* Build configuration list for PBXApplicationTarget "Penguin-Command" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+				CBA7149907380E6F00460B58 /* CopyFiles */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/SDL_image.framework/Headers,
+					/Library/Frameworks/SDL_mixer.framework/Headers,
+					/Library/Frameworks/SDL.framework/Headers,
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DUSE_SOUND";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SDL,
+				);
+				PRODUCT_NAME = "Penguin-Command";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = "Penguin-Command";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "Penguin-Command";
+			productReference = 17587328FF379C6511CA2CBB /* Penguin-Command.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleIconFile</key>
+	<string>icon</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	<key>NSMainNibFile</key>
+	<string>SDLMain.nib</string>
+	<key>NSPrincipalClass</key>
+	<string>SDLApplication</string>
+	<key>Penguin-Command</key>
+	<string>SDL Cocoa App</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B2F367C604C7ADC700A80002 /* SDLMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = B2F367C504C7ADC700A80002 /* SDLMain.nib */; };
+		CB01918F0732A5E8008A2822 /* wave.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01917B0732A5E8008A2822 /* wave.c */; };
+		CB0191910732A5E8008A2822 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01917D0732A5E8008A2822 /* game.c */; };
+		CB0191920732A5E8008A2822 /* shot.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01917E0732A5E8008A2822 /* shot.c */; };
+		CB0191930732A5E8008A2822 /* SFont.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01917F0732A5E8008A2822 /* SFont.c */; };
+		CB0191950732A5E8008A2822 /* mouse.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191810732A5E8008A2822 /* mouse.c */; };
+		CB0191960732A5E8008A2822 /* explosion.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191820732A5E8008A2822 /* explosion.c */; };
+		CB0191970732A5E8008A2822 /* shot2.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191830732A5E8008A2822 /* shot2.c */; };
+		CB0191980732A5E8008A2822 /* SDL_gfxPrimitives.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191840732A5E8008A2822 /* SDL_gfxPrimitives.c */; };
+		CB0191990732A5E8008A2822 /* options.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191850732A5E8008A2822 /* options.c */; };
+		CB01919A0732A5E8008A2822 /* sound.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191860732A5E8008A2822 /* sound.c */; };
+		CB01919C0732A5E8008A2822 /* gfx.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191880732A5E8008A2822 /* gfx.c */; };
+		CB01919D0732A5E8008A2822 /* bomb.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0191890732A5E8008A2822 /* bomb.c */; };
+		CB01919E0732A5E8008A2822 /* joystick.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01918A0732A5E8008A2822 /* joystick.c */; };
+		CB0191A00732A5E8008A2822 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01918C0732A5E8008A2822 /* main.c */; };
+		CB0191A10732A5E8008A2822 /* missile.c in Sources */ = {isa = PBXBuildFile; fileRef = CB01918D0732A5E8008A2822 /* missile.c */; };
+		CB0191B30732A5FB008A2822 /* wave.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A30732A5FB008A2822 /* wave.h */; };
+		CB0191B40732A5FB008A2822 /* SDL_gfxPrimitives_font.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A40732A5FB008A2822 /* SDL_gfxPrimitives_font.h */; };
+		CB0191B50732A5FB008A2822 /* SFont.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A50732A5FB008A2822 /* SFont.h */; };
+		CB0191B60732A5FB008A2822 /* mouse.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A60732A5FB008A2822 /* mouse.h */; };
+		CB0191B70732A5FB008A2822 /* explosion.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A70732A5FB008A2822 /* explosion.h */; };
+		CB0191B80732A5FB008A2822 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A80732A5FB008A2822 /* main.h */; };
+		CB0191B90732A5FB008A2822 /* shot.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191A90732A5FB008A2822 /* shot.h */; };
+		CB0191BA0732A5FB008A2822 /* SDL_gfxPrimitives.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191AA0732A5FB008A2822 /* SDL_gfxPrimitives.h */; };
+		CB0191BB0732A5FB008A2822 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191AB0732A5FB008A2822 /* options.h */; };
+		CB0191BC0732A5FB008A2822 /* gfx.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191AC0732A5FB008A2822 /* gfx.h */; };
+		CB0191BD0732A5FB008A2822 /* joystick.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191AD0732A5FB008A2822 /* joystick.h */; };
+		CB0191BE0732A5FB008A2822 /* sound.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191AE0732A5FB008A2822 /* sound.h */; };
+		CB0191BF0732A5FB008A2822 /* game.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191AF0732A5FB008A2822 /* game.h */; };
+		CB0191C00732A5FB008A2822 /* bomb.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191B00732A5FB008A2822 /* bomb.h */; };
+		CB0191C20732A5FB008A2822 /* missile.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0191B20732A5FB008A2822 /* missile.h */; };
+		CB0193CC0732A81C008A2822 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CB0192E80732A81B008A2822 /* data */; };
+		CB85A38D0BAD8E1900FCCB7B /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB85A38A0BAD8E1900FCCB7B /* SDL.framework */; };
+		CB85A38E0BAD8E1900FCCB7B /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB85A38B0BAD8E1900FCCB7B /* SDL_image.framework */; };
+		CB85A38F0BAD8E1900FCCB7B /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB85A38C0BAD8E1900FCCB7B /* SDL_mixer.framework */; };
+		CBA721AA0738141600460B58 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CBA721A90738141600460B58 /* icon.icns */; };
+		F5A47AA101A0483001D3D55B /* SDLMain.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A47A9D01A0482F01D3D55B /* SDLMain.h */; };
+		F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A47A9E01A0483001D3D55B /* SDLMain.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBA7149907380E6F00460B58 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17587328FF379C6511CA2CBB /* Penguin-Command.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "Penguin-Command.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B2F367C504C7ADC700A80002 /* SDLMain.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = SDLMain.nib; sourceTree = "<group>"; };
+		CB01917B0732A5E8008A2822 /* wave.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = wave.c; path = ../src/wave.c; sourceTree = SOURCE_ROOT; };
+		CB01917D0732A5E8008A2822 /* game.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = game.c; path = ../src/game.c; sourceTree = SOURCE_ROOT; };
+		CB01917E0732A5E8008A2822 /* shot.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = shot.c; path = ../src/shot.c; sourceTree = SOURCE_ROOT; };
+		CB01917F0732A5E8008A2822 /* SFont.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = SFont.c; path = ../src/SFont.c; sourceTree = SOURCE_ROOT; };
+		CB0191810732A5E8008A2822 /* mouse.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mouse.c; path = ../src/mouse.c; sourceTree = SOURCE_ROOT; };
+		CB0191820732A5E8008A2822 /* explosion.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = explosion.c; path = ../src/explosion.c; sourceTree = SOURCE_ROOT; };
+		CB0191830732A5E8008A2822 /* shot2.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = shot2.c; path = ../src/shot2.c; sourceTree = SOURCE_ROOT; };
+		CB0191840732A5E8008A2822 /* SDL_gfxPrimitives.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = SDL_gfxPrimitives.c; path = ../src/SDL_gfxPrimitives.c; sourceTree = SOURCE_ROOT; };
+		CB0191850732A5E8008A2822 /* options.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = options.c; path = ../src/options.c; sourceTree = SOURCE_ROOT; };
+		CB0191860732A5E8008A2822 /* sound.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = sound.c; path = ../src/sound.c; sourceTree = SOURCE_ROOT; };
+		CB0191880732A5E8008A2822 /* gfx.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = gfx.c; path = ../src/gfx.c; sourceTree = SOURCE_ROOT; };
+		CB0191890732A5E8008A2822 /* bomb.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = bomb.c; path = ../src/bomb.c; sourceTree = SOURCE_ROOT; };
+		CB01918A0732A5E8008A2822 /* joystick.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = joystick.c; path = ../src/joystick.c; sourceTree = SOURCE_ROOT; };
+		CB01918C0732A5E8008A2822 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../src/main.c; sourceTree = SOURCE_ROOT; };
+		CB01918D0732A5E8008A2822 /* missile.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = missile.c; path = ../src/missile.c; sourceTree = SOURCE_ROOT; };
+		CB0191A30732A5FB008A2822 /* wave.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = wave.h; path = ../src/wave.h; sourceTree = SOURCE_ROOT; };
+		CB0191A40732A5FB008A2822 /* SDL_gfxPrimitives_font.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SDL_gfxPrimitives_font.h; path = ../src/SDL_gfxPrimitives_font.h; sourceTree = SOURCE_ROOT; };
+		CB0191A50732A5FB008A2822 /* SFont.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SFont.h; path = ../src/SFont.h; sourceTree = SOURCE_ROOT; };
+		CB0191A60732A5FB008A2822 /* mouse.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = mouse.h; path = ../src/mouse.h; sourceTree = SOURCE_ROOT; };
+		CB0191A70732A5FB008A2822 /* explosion.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = explosion.h; path = ../src/explosion.h; sourceTree = SOURCE_ROOT; };
+		CB0191A80732A5FB008A2822 /* main.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = main.h; path = ../src/main.h; sourceTree = SOURCE_ROOT; };
+		CB0191A90732A5FB008A2822 /* shot.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = shot.h; path = ../src/shot.h; sourceTree = SOURCE_ROOT; };
+		CB0191AA0732A5FB008A2822 /* SDL_gfxPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SDL_gfxPrimitives.h; path = ../src/SDL_gfxPrimitives.h; sourceTree = SOURCE_ROOT; };
+		CB0191AB0732A5FB008A2822 /* options.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = options.h; path = ../src/options.h; sourceTree = SOURCE_ROOT; };
+		CB0191AC0732A5FB008A2822 /* gfx.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gfx.h; path = ../src/gfx.h; sourceTree = SOURCE_ROOT; };
+		CB0191AD0732A5FB008A2822 /* joystick.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = joystick.h; path = ../src/joystick.h; sourceTree = SOURCE_ROOT; };
+		CB0191AE0732A5FB008A2822 /* sound.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sound.h; path = ../src/sound.h; sourceTree = SOURCE_ROOT; };
+		CB0191AF0732A5FB008A2822 /* game.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = game.h; path = ../src/game.h; sourceTree = SOURCE_ROOT; };
+		CB0191B00732A5FB008A2822 /* bomb.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = bomb.h; path = ../src/bomb.h; sourceTree = SOURCE_ROOT; };
+		CB0191B20732A5FB008A2822 /* missile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = missile.h; path = ../src/missile.h; sourceTree = SOURCE_ROOT; };
+		CB0192E80732A81B008A2822 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../data; sourceTree = SOURCE_ROOT; };
+		CB85A38A0BAD8E1900FCCB7B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
+		CB85A38B0BAD8E1900FCCB7B /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = /Library/Frameworks/SDL_image.framework; sourceTree = "<absolute>"; };
+		CB85A38C0BAD8E1900FCCB7B /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = /Library/Frameworks/SDL_mixer.framework; sourceTree = "<absolute>"; };
+		CBA721A90738141600460B58 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		F5A47A9D01A0482F01D3D55B /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = SOURCE_ROOT; };
+		F5A47A9E01A0483001D3D55B /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+				CB85A38D0BAD8E1900FCCB7B /* SDL.framework in Frameworks */,
+				CB85A38E0BAD8E1900FCCB7B /* SDL_image.framework in Frameworks */,
+				CB85A38F0BAD8E1900FCCB7B /* SDL_mixer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F5A47A9D01A0482F01D3D55B /* SDLMain.h */,
+				F5A47A9E01A0483001D3D55B /* SDLMain.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB85A38A0BAD8E1900FCCB7B /* SDL.framework */,
+				CB85A38B0BAD8E1900FCCB7B /* SDL_image.framework */,
+				CB85A38C0BAD8E1900FCCB7B /* SDL_mixer.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* Penguin-Command.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Penguin-Command */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "Penguin-Command";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CB01917B0732A5E8008A2822 /* wave.c */,
+				CB01917D0732A5E8008A2822 /* game.c */,
+				CB01917E0732A5E8008A2822 /* shot.c */,
+				CB01917F0732A5E8008A2822 /* SFont.c */,
+				CB0191810732A5E8008A2822 /* mouse.c */,
+				CB0191820732A5E8008A2822 /* explosion.c */,
+				CB0191830732A5E8008A2822 /* shot2.c */,
+				CB0191840732A5E8008A2822 /* SDL_gfxPrimitives.c */,
+				CB0191850732A5E8008A2822 /* options.c */,
+				CB0191860732A5E8008A2822 /* sound.c */,
+				CB0191880732A5E8008A2822 /* gfx.c */,
+				CB0191890732A5E8008A2822 /* bomb.c */,
+				CB01918A0732A5E8008A2822 /* joystick.c */,
+				CB01918C0732A5E8008A2822 /* main.c */,
+				CB01918D0732A5E8008A2822 /* missile.c */,
+				CB0191A30732A5FB008A2822 /* wave.h */,
+				CB0191A40732A5FB008A2822 /* SDL_gfxPrimitives_font.h */,
+				CB0191A50732A5FB008A2822 /* SFont.h */,
+				CB0191A60732A5FB008A2822 /* mouse.h */,
+				CB0191A70732A5FB008A2822 /* explosion.h */,
+				CB0191A80732A5FB008A2822 /* main.h */,
+				CB0191A90732A5FB008A2822 /* shot.h */,
+				CB0191AA0732A5FB008A2822 /* SDL_gfxPrimitives.h */,
+				CB0191AB0732A5FB008A2822 /* options.h */,
+				CB0191AC0732A5FB008A2822 /* gfx.h */,
+				CB0191AD0732A5FB008A2822 /* joystick.h */,
+				CB0191AE0732A5FB008A2822 /* sound.h */,
+				CB0191AF0732A5FB008A2822 /* game.h */,
+				CB0191B00732A5FB008A2822 /* bomb.h */,
+				CB0191B20732A5FB008A2822 /* missile.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB0192E80732A81B008A2822 /* data */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				B2F367C504C7ADC700A80002 /* SDLMain.nib */,
+				CBA721A90738141600460B58 /* icon.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A47AA101A0483001D3D55B /* SDLMain.h in Headers */,
+				CB0191B30732A5FB008A2822 /* wave.h in Headers */,
+				CB0191B40732A5FB008A2822 /* SDL_gfxPrimitives_font.h in Headers */,
+				CB0191B50732A5FB008A2822 /* SFont.h in Headers */,
+				CB0191B60732A5FB008A2822 /* mouse.h in Headers */,
+				CB0191B70732A5FB008A2822 /* explosion.h in Headers */,
+				CB0191B80732A5FB008A2822 /* main.h in Headers */,
+				CB0191B90732A5FB008A2822 /* shot.h in Headers */,
+				CB0191BA0732A5FB008A2822 /* SDL_gfxPrimitives.h in Headers */,
+				CB0191BB0732A5FB008A2822 /* options.h in Headers */,
+				CB0191BC0732A5FB008A2822 /* gfx.h in Headers */,
+				CB0191BD0732A5FB008A2822 /* joystick.h in Headers */,
+				CB0191BE0732A5FB008A2822 /* sound.h in Headers */,
+				CB0191BF0732A5FB008A2822 /* game.h in Headers */,
+				CB0191C00732A5FB008A2822 /* bomb.h in Headers */,
+				CB0191C20732A5FB008A2822 /* missile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CBD6D83B0955B0F000B3349B /* Build configuration list for PBXProject "Penguin-Command" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Penguin-Command */;
+			projectDirPath = "";
+			targets = (
+				29B97326FDCFA39411CA2CEA /* Penguin-Command */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				B2F367C604C7ADC700A80002 /* SDLMain.nib in Resources */,
+				CB0193CC0732A81C008A2822 /* data in Resources */,
+				CBA721AA0738141600460B58 /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A47AA301A0483001D3D55B /* SDLMain.m in Sources */,
+				CB01918F0732A5E8008A2822 /* wave.c in Sources */,
+				CB0191910732A5E8008A2822 /* game.c in Sources */,
+				CB0191920732A5E8008A2822 /* shot.c in Sources */,
+				CB0191930732A5E8008A2822 /* SFont.c in Sources */,
+				CB0191950732A5E8008A2822 /* mouse.c in Sources */,
+				CB0191960732A5E8008A2822 /* explosion.c in Sources */,
+				CB0191970732A5E8008A2822 /* shot2.c in Sources */,
+				CB0191980732A5E8008A2822 /* SDL_gfxPrimitives.c in Sources */,
+				CB0191990732A5E8008A2822 /* options.c in Sources */,
+				CB01919A0732A5E8008A2822 /* sound.c in Sources */,
+				CB01919C0732A5E8008A2822 /* gfx.c in Sources */,
+				CB01919D0732A5E8008A2822 /* bomb.c in Sources */,
+				CB01919E0732A5E8008A2822 /* joystick.c in Sources */,
+				CB0191A00732A5E8008A2822 /* main.c in Sources */,
+				CB0191A10732A5E8008A2822 /* missile.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBD6D8380955B0F000B3349B /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/SDL_image.framework/Headers,
+					/Library/Frameworks/SDL_mixer.framework/Headers,
+					/Library/Frameworks/SDL.framework/Headers,
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "-DUSE_SOUND";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SDL,
+				);
+				PRODUCT_NAME = "Penguin-Command";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		CBD6D8390955B0F000B3349B /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/SDL_image.framework/Headers,
+					/Library/Frameworks/SDL_mixer.framework/Headers,
+					/Library/Frameworks/SDL.framework/Headers,
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DUSE_SOUND";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SDL,
+				);
+				PRODUCT_NAME = "Penguin-Command";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		CBD6D83A0955B0F000B3349B /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/SDL_image.framework/Headers,
+					/Library/Frameworks/SDL_mixer.framework/Headers,
+					/Library/Frameworks/SDL.framework/Headers,
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DUSE_SOUND";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SDL,
+				);
+				PRODUCT_NAME = "Penguin-Command";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		CBD6D83C0955B0F000B3349B /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		CBD6D83D0955B0F000B3349B /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		CBD6D83E0955B0F000B3349B /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBD6D8370955B0F000B3349B /* Build configuration list for PBXApplicationTarget "Penguin-Command" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD6D8380955B0F000B3349B /* Development */,
+				CBD6D8390955B0F000B3349B /* Deployment */,
+				CBD6D83A0955B0F000B3349B /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		CBD6D83B0955B0F000B3349B /* Build configuration list for PBXProject "Penguin-Command" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD6D83C0955B0F000B3349B /* Development */,
+				CBD6D83D0955B0F000B3349B /* Deployment */,
+				CBD6D83E0955B0F000B3349B /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

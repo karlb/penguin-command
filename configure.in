@@ -1,0 +1,52 @@
+######## Process this file with autoconf to produce a configure script.
+AC_INIT
+AC_CONFIG_SRCDIR([README])
+
+######## Detect the canonical host and target build environment
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+
+######## Setup for automake
+NAME="penguin-command"
+SDL_VERSION=1.1.5
+AM_INIT_AUTOMAKE($NAME, 1.6.10)
+
+######## Check for tools
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+
+######## Check for compiler environment
+AC_C_CONST
+
+######## Check for SDL
+AM_PATH_SDL($SDL_VERSION,
+            :,
+	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
+)
+
+######## Check for headers
+AC_CHECK_HEADERS(math.h, , AC_MSG_ERROR(Your system is missing math.h !))
+
+######## Check for other libs
+AC_CHECK_LIB(z, main, , AC_MSG_ERROR(Your system is missing libz!))
+AC_CHECK_LIB(m, main, , AC_MSG_ERROR(Your system is missing libm!))
+AC_CHECK_LIB(SDL_mixer, main, SOUND="-lSDL_mixer"; CFLAGS="$CFLAGS -DUSE_SOUND",
+	    AC_MSG_ERROR(Your system is missing SDL_mixer! see http://www.libsdl.org/projects/SDL_mixer/),
+	    $SDL_LIBS)
+AC_CHECK_LIB(SDL_image, main, , AC_MSG_ERROR(Your system is missing libSDL_image!))
+
+######## Set compiler flags and libraries
+CFLAGS="$CFLAGS $SDL_CFLAGS -Wall -DJOYSTICK -DDATADIR=\"\\\"$datadir/penguin-command\\\"\""
+LIBS="$SDL_LIBS $SOUND -lSDL_image -lSDL -lm"
+
+######## Finally create all the generated files
+AC_CONFIG_FILES([
+Makefile
+src/Makefile
+data/Makefile
+data/gfx/Makefile
+data/sound/Makefile
+penguin-command.spec
+])
+AC_OUTPUT

@@ -1,0 +1,173 @@
+
+Version ???
+    -corrected audio buffer size (was not power of 2, which caused 
+	problems on some systems)
+
+Version 1.6.7
+    -larger audio buffer to reduce sound problems on some systems
+    -updated config.guess
+
+Version 1.6.6
+    -you cannot shoot down anymore. This fixes a bug which could get you
+    into an infinite loop (Thanks Charles Puffer)
+    -penguin-command can be started without sound card again...
+    -penguin-command includes rpm spec file (Thanks Michal Ambroz)
+    -some minor cleanups
+    -added japanese man page (Thanks Tatsuo Sekine)
+
+Version 1.6.5
+    -using jpegs to decrease package size
+    -updated automake files
+    -some minor fixes and tweaks
+
+Version 1.6.4
+    -new aclocal
+
+Version 1.6.3
+    -a bunch of different cleanups (Thanks Thue!!!)
+    -even more cleanups and bugfixes (fixes some music problems)
+
+Version 1.6.2
+    -new SDL_gfxPrimitives
+    -fixed a music bug
+    -increased sound effects volume
+    -updated man page
+    -increased music quality to 44khz
+    -probably fixed the crash-when-dsp-is-in-use-bug
+
+Version 1.6.1
+    -fixed the shot reload bug in arcade mode
+    -anti aliased lines are back
+    -mouse button swap added (for left-handed mice)
+    -bombs avoid the player's shots faster
+    -shots are removed before the end-of-wave scoring
+    -updated SFont
+
+Version 1.6.0
+    -fixed flyer at end of wave bug
+    -fixed SDL_image.h bug
+    -joystick support
+    -fixed flyer at restart bug
+    -penguin-command is now SDL 1.2 compatible
+    -fix a bug concerning wrong video flags
+    -now compiling with -Wall -pedantic
+    -code cleanup
+    -faster explosions
+
+**** Penguin command development divided into to branches, due to
+     stability issues. This branch continues the 1.4.x series and
+     is called 1.6.x .
+     The 1.5.x branch won't be further developed, because it's
+     too unstable.
+
+Version 1.4.?
+    -removed unnecessary variables in data/Makefile.am
+    -really added header newlines
+    -better command line parameters
+
+Version 1.4.4
+    -added a final newline to headers
+    -added icon
+
+Version 1.4.3
+    -This release is based on Version 1.3 due to stability issues.
+     Following things have not been reincorporated, yet:
+         -OpenGL support
+	 -fullscreen update every frame
+    -added man page
+    -fixed bomb-off-screen bug (thanks Kristopher Allan Kersey)
+    -now up to 8 channels for sound effects
+    -score is displayed properly
+
+Version 1.4.2
+    -fixed mouse cursor bug (thanks Thue)
+    -new SFont version -> fixes highscore bug (thanks to all people reporting this)
+
+Version 1.4.1
+    -new SFont version -> fixes some bugs with text input
+    -now doing full screen update every time
+
+Version 1.4
+    -main menu can be left with ESC
+    -added ALT-ENTER fullscreen toggle
+    -screen fadeout when quit
+    -added pause function
+    -better configure script
+    -removed a lot of warnings and added the -Wall switch
+    -explosions are much faster now
+    -new mouse cursor
+    -added new enemy: bomb-dropping flyers
+    -added new title screen: thanks to Shane Simmons
+    -new background
+    -added experimental GL support
+    -faster graphics
+    -bugfixes
+    -removed one .mod
+    -removed SDL_mixer library
+
+Version 1.3
+    -better shot creation code
+    -less missile splits in high levels
+    -new game mode: arcade
+    -added new sound effects, music fade ins and outs
+    -new GPL'ed music
+    -added command line help
+    -slightliy faster shots
+    -help screen for arcade mode
+    -now using SDL 1.1.5, which is required now
+    -faster alpha blits
+    -new mixer
+    -cool screen fades
+
+Version 1.2
+    -the shots have better lines
+    -different detail modes
+    -changed the web site to http://members.linuxstart.com/~karlb/
+    -less CPU usage in credits screen and some others
+    -fixed a bug that could cause the game to crash when updating very, very
+     many pixles.
+    -fixed a bug that made the score number appear on the title screen.
+    -the starting wave can now be selected
+    -works in 8 bpp, too
+    -data files are now copied to $(datadir)/games/penguin-command according
+     to FHS
+    -older versions crashed when shooting at the right egde of the screen
+     ->fixed
+    -new SFont version
+
+Version 1.1
+    -No problems with SuSE 6.2, but no check for libpng, either
+    -faster menu
+    -the highscore list is shown properly after the game has been lost
+    -added "Defend Cities!" message when starting a wave
+    -missiles are longer
+    -removed unneccesary jpeglib
+    -fixed some bugs when starting a game twice without quitting
+    -more waves
+
+Version 1.0
+    -fixed a bug when entering no name to the hiscore list. Now
+     CmdrTaco is filled in, when no name has been entered :-)
+    -new music
+    -again the font has been slighly improved
+    -better check for header files in configure
+    -the shots are a bit faster, which makes the game a bit easier.
+    -better configure.in (looks for zlib)
+    -added a menu to the title screen with
+	o quit button
+	o start game button
+	o credits screen
+	o highscore button
+	o help screen
+    -added a cool cursor! (and a not so cool HW-cursor)
+    -the shots are more precise
+
+Version 0.8
+    -added cute explosions
+    -slightly better font
+    -the gamespeed is more constant across different computers
+    -added a hiscore table
+    -added command line options
+
+Version 0.6
+    -first release 
